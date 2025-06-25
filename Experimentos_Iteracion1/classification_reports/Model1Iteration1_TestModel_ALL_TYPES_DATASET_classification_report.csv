@@ -1,0 +1,44 @@
+,precision,recall,f1-score,support,0;;;;;;
+Cerebro sano,0.6470588235294118,0.4230769230769231,0.5116279069767442,104.0,;;;;;;
+Cerebro con HSVE,0.6129032258064516,0.7983193277310925,0.6934306569343065,119.0,;;;;;;
+accuracy,0.6233183856502242,0.6233183856502242,0.6233183856502242,0.6233183856502242,;;;;;;
+macro avg,0.6299810246679317,0.6106981254040078,0.6025292819555254,223.0,;;;;;;
+weighted avg,0.6288322938028098,0.6233183856502242,0.6086437242186721,223.0,;;;;;;
+TRAINING - 0,,,,,Número de ejemplos de la clase 0 en el conjunto de entrenamiento: 180;;;;;;
+TRAINING - 1,,,,,Número de ejemplos de la clase 1 en el conjunto de entrenamiento: 180;;;;;;
+VALIDACIÓN - 0,,,,,Número de ejemplos de la clase 0 en el conjunto de validación: 67;;;;;;
+VALIDACIÓN - 1,,,,,Número de ejemplos de la clase 1 en el conjunto de validación: 67;;;;;;
+TEST - 0,,,,,Número de ejemplos de la clase 0 en el conjunto de test: 104;;;;;;
+TEST - 1,,,,,Número de ejemplos de la clase 1 en el conjunto de test: 119;;;;;;
+Training-time,,,,,Duración del entrenamiento: 1 minutos y 19 segundos;;;;;;
+Accuracy,,,,,Model Accuracy: 0.6233183856502242;;;;;;
+AUC-ROC,,,,,AUC-ROC: 0.5573691014867486;;;;;;
+;;;;;;
+;;;;;;
+"Model: ""sequential""";;;;;;Entrenando modelo de CNN...
+_________________________________________________________________;;;;;;Epoch 1/30
+ Layer (type)                Output Shape              Param #;;;;;;2023-06-04 18:52:35.939467: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8100
+=================================================================;;;;;;2023-06-04 18:52:38.144743: I tensorflow/core/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+ conv2d (Conv2D)             (None, 254, 254, 32)      320;;;;;;23/23 [==============================] - 11s 115ms/step - loss: 0.4297 - accuracy: 0.8167 - precision: 0.8314 - val_loss: 0.6935 - val_accuracy: 0.6119 - val_precision: 0.6923
+;;;;;;Epoch 2/30
+ max_pooling2d (MaxPooling2D  (None, 84, 84, 32)       0;;;;;;23/23 [==============================] - 2s 67ms/step - loss: 0.2345 - accuracy: 0.8917 - precision: 0.8939 - val_loss: 0.7238 - val_accuracy: 0.6343 - val_precision: 0.7250
+ );;;;;;Epoch 3/30
+;;;;;;23/23 [==============================] - 2s 75ms/step - loss: 0.1277 - accuracy: 0.9500 - precision: 0.9451 - val_loss: 0.7769 - val_accuracy: 0.6567 - val_precision: 0.6438
+ conv2d_1 (Conv2D)           (None, 82, 82, 64)        18496;;;;;;Epoch 4/30
+;;;;;;23/23 [==============================] - 2s 79ms/step - loss: 0.0722 - accuracy: 0.9833 - precision: 1.0000 - val_loss: 0.9099 - val_accuracy: 0.6045 - val_precision: 0.6591
+ max_pooling2d_1 (MaxPooling  (None, 27, 27, 64)       0;;;;;;Epoch 5/30
+ 2D);;;;;;23/23 [==============================] - 4s 159ms/step - loss: 0.0534 - accuracy: 0.9889 - precision: 0.9944 - val_loss: 0.8143 - val_accuracy: 0.6716 - val_precision: 0.6620
+;;;;;;Epoch 6/30
+ flatten (Flatten)           (None, 46656)             0;;;;;;23/23 [==============================] - 10s 455ms/step - loss: 0.0312 - accuracy: 0.9972 - precision: 1.0000 - val_loss: 0.8946 - val_accuracy: 0.6791 - val_precision: 0.6818
+;;;;;;Epoch 7/30
+ dense (Dense)               (None, 256)               11944192;;;;;;23/23 [==============================] - 12s 511ms/step - loss: 0.0207 - accuracy: 0.9972 - precision: 1.0000 - val_loss: 0.9021 - val_accuracy: 0.6791 - val_precision: 0.7000
+;;;;;;Epoch 8/30
+ dense_1 (Dense)             (None, 512)               131584;;;;;;23/23 [==============================] - 9s 398ms/step - loss: 0.0117 - accuracy: 0.9972 - precision: 1.0000 - val_loss: 0.9581 - val_accuracy: 0.7164 - val_precision: 0.7042
+;;;;;;Epoch 9/30
+ dense_2 (Dense)             (None, 1)                 513;;;;;;23/23 [==============================] - 9s 413ms/step - loss: 0.0125 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.8803 - val_accuracy: 0.7015 - val_precision: 0.7288
+;;;;;;Epoch 10/30
+=================================================================;;;;;;23/23 [==============================] - 9s 400ms/step - loss: 0.0058 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 1.0433 - val_accuracy: 0.6791 - val_precision: 0.7222
+Total params: 12,095,105;;;;;;Epoch 11/30
+Trainable params: 12,095,105;;;;;;23/23 [==============================] - 9s 400ms/step - loss: 0.0037 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 1.0956 - val_accuracy: 0.6940 - val_precision: 0.7241
+Non-trainable params: 0;;;;;;Modelo entrenado
+_________________________________________________________________;;;;;;Duraci�n del entrenamiento: 1 minutos y 19 segundos

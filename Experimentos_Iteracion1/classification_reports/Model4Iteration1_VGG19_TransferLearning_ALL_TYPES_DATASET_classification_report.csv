@@ -1,0 +1,57 @@
+,precision,recall,f1-score,support,0;;;;;;
+Cerebro sano,0.5,0.3942307692307692,0.44086021505376344,104.0,;;;;;;
+Cerebro con HSVE,0.5531914893617021,0.6554621848739496,0.6000000000000001,119.0,;;;;;;
+accuracy,0.5336322869955157,0.5336322869955157,0.5336322869955157,0.5336322869955157,;;;;;;
+macro avg,0.5265957446808511,0.5248464770523594,0.5204301075268818,223.0,;;;;;;
+weighted avg,0.5283846961167827,0.5336322869955157,0.5257823424465982,223.0,;;;;;;
+TRAINING - 0,,,,,Número de ejemplos de la clase 0 en el conjunto de entrenamiento: 180;;;;;;
+TRAINING - 1,,,,,Número de ejemplos de la clase 1 en el conjunto de entrenamiento: 180;;;;;;
+VALIDACIÓN - 0,,,,,Número de ejemplos de la clase 0 en el conjunto de validación: 67;;;;;;
+VALIDACIÓN - 1,,,,,Número de ejemplos de la clase 1 en el conjunto de validación: 67;;;;;;
+TEST - 0,,,,,Número de ejemplos de la clase 0 en el conjunto de test: 104;;;;;;
+TEST - 1,,,,,Número de ejemplos de la clase 1 en el conjunto de test: 119;;;;;;
+Training-time,,,,,Duración del entrenamiento: 43 minutos y 24 segundos;;;;;;
+Accuracy,,,,,Model Accuracy: 0.5336322869955157;;;;;;
+AUC-ROC,,,,,AUC-ROC: 0.5406431803490627;;;;;;
+;;;;;;
+;;;;;;
+_________________________________________________________________;;;;;;Entrenando modelo de CNN...
+"Model: ""sequential""";;;;;;Epoch 1/30
+_________________________________________________________________;;;;;;2023-06-04 20:44:35.683986: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8100
+ Layer (type)                Output Shape              Param #;;;;;;2023-06-04 20:44:38.183334: I tensorflow/core/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+=================================================================;;;;;;2023-06-04 20:44:40.485581: W tensorflow/core/common_runtime/bfc_allocator.cc:360] Garbage collection: deallocate free memory regions (i.e., allocations) so that we can re-allocate a larger region to avoid OOM due to memory fragmentation. If you see this message frequently, you are running near the threshold of the available device memory and re-allocation may incur great performance overhead. You may try smaller batch sizes to observe the performance impact. Set TF_ENABLE_GPU_GARBAGE_COLLECTION=false if you'd like to disable this feature.
+ conv2d (Conv2D)             (None, 254, 254, 3)       30;;;;;;2023-06-04 20:44:41.344846: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+;;;;;;2023-06-04 20:44:46.586948: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.18GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+ vgg19 (Functional)          (None, None, None, 512)   20024384;;;;;;2023-06-04 20:44:48.201274: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.18GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+;;;;;;2023-06-04 20:44:49.879151: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+ flatten (Flatten)           (None, 25088)             0;;;;;;45/45 [==============================] - ETA: 0s - loss: 0.3530 - accuracy: 0.8639 - precision: 0.87432023-06-04 20:45:51.509418: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.22GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+;;;;;;2023-06-04 20:46:03.678663: W tensorflow/core/common_runtime/bfc_allocator.cc:360] Garbage collection: deallocate free memory regions (i.e., allocations) so that we can re-allocate a larger region to avoid OOM due to memory fragmentation. If you see this message frequently, you are running near the threshold of the available device memory and re-allocation may incur great performance overhead. You may try smaller batch sizes to observe the performance impact. Set TF_ENABLE_GPU_GARBAGE_COLLECTION=false if you'd like to disable this feature.
+ dense (Dense)               (None, 256)               6422784;;;;;;45/45 [==============================] - 95s 2s/step - loss: 0.3530 - accuracy: 0.8639 - precision: 0.8743 - val_loss: 1.0326 - val_accuracy: 0.5149 - val_precision: 0.6250
+;;;;;;Epoch 2/30
+ dense_1 (Dense)             (None, 512)               131584;;;;;;45/45 [==============================] - 180s 4s/step - loss: 0.1355 - accuracy: 0.9389 - precision: 0.9341 - val_loss: 1.3962 - val_accuracy: 0.5075 - val_precision: 0.5714
+;;;;;;Epoch 3/30
+ dense_2 (Dense)             (None, 1)                 513;;;;;;45/45 [==============================] - 198s 4s/step - loss: 0.0544 - accuracy: 0.9806 - precision: 0.9943 - val_loss: 0.8011 - val_accuracy: 0.6716 - val_precision: 0.6494
+;;;;;;Epoch 4/30
+=================================================================;;;;;;45/45 [==============================] - 194s 4s/step - loss: 0.0306 - accuracy: 0.9972 - precision: 1.0000 - val_loss: 0.6894 - val_accuracy: 0.7388 - val_precision: 0.7667
+Total params: 26,579,295;;;;;;Epoch 5/30
+Trainable params: 6,554,911;;;;;;45/45 [==============================] - 192s 4s/step - loss: 0.0067 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.8776 - val_accuracy: 0.7239 - val_precision: 0.8571
+Non-trainable params: 20,024,384;;;;;;Epoch 6/30
+_________________________________________________________________;;;;;;45/45 [==============================] - 193s 4s/step - loss: 0.0038 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.8706 - val_accuracy: 0.7388 - val_precision: 0.8636
+;;;;;;Epoch 7/30
+;;;;;;45/45 [==============================] - 195s 4s/step - loss: 0.0030 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.8332 - val_accuracy: 0.7313 - val_precision: 0.8298
+;;;;;;Epoch 8/30
+;;;;;;45/45 [==============================] - 192s 4s/step - loss: 0.0024 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.9569 - val_accuracy: 0.7313 - val_precision: 0.8605
+;;;;;;Epoch 9/30
+;;;;;;45/45 [==============================] - 196s 4s/step - loss: 0.0018 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.9178 - val_accuracy: 0.7313 - val_precision: 0.8605
+;;;;;;Epoch 10/30
+;;;;;;45/45 [==============================] - 193s 4s/step - loss: 0.0014 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.8789 - val_accuracy: 0.7388 - val_precision: 0.8333
+;;;;;;Epoch 11/30
+;;;;;;45/45 [==============================] - 194s 4s/step - loss: 0.0012 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.9117 - val_accuracy: 0.7388 - val_precision: 0.8333
+;;;;;;Epoch 12/30
+;;;;;;45/45 [==============================] - 194s 4s/step - loss: 9.6626e-04 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.9325 - val_accuracy: 0.7313 - val_precision: 0.8298
+;;;;;;Epoch 13/30
+;;;;;;45/45 [==============================] - 192s 4s/step - loss: 8.4967e-04 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.9466 - val_accuracy: 0.7313 - val_precision: 0.8298
+;;;;;;Epoch 14/30
+;;;;;;45/45 [==============================] - 194s 4s/step - loss: 7.4906e-04 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.9534 - val_accuracy: 0.7313 - val_precision: 0.8298
+;;;;;;Modelo entrenado
+;;;;;;Duraci�n del entrenamiento: 43 minutos y 24 segundos
