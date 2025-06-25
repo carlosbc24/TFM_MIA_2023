@@ -1,0 +1,62 @@
+,precision,recall,f1-score,support,0;;;;;;;
+Cerebro sano,0.7129629629629629,0.7403846153846154,0.7264150943396226,104.0,;;;;;;;
+Cerebro con HSVE,0.7652173913043478,0.7394957983193278,0.7521367521367521,119.0,;;;;;;;
+accuracy,0.7399103139013453,0.7399103139013453,0.7399103139013453,0.7399103139013453,;;;;;;;
+macro avg,0.7390901771336553,0.7399402068519716,0.7392759232381874,223.0,;;;;;;;
+weighted avg,0.7408476130644195,0.7399103139013453,0.7401410014152208,223.0,;;;;;;;
+TRAINING - 0,,,,,Número de ejemplos de la clase 0 en el conjunto de entrenamiento: 180;;;;;;;
+TRAINING - 1,,,,,Número de ejemplos de la clase 1 en el conjunto de entrenamiento: 180;;;;;;;
+VALIDACIÓN - 0,,,,,Número de ejemplos de la clase 0 en el conjunto de validación: 67;;;;;;;
+VALIDACIÓN - 1,,,,,Número de ejemplos de la clase 1 en el conjunto de validación: 67;;;;;;;
+TEST - 0,,,,,Número de ejemplos de la clase 0 en el conjunto de test: 104;;;;;;;
+TEST - 1,,,,,Número de ejemplos de la clase 1 en el conjunto de test: 119;;;;;;;
+Training-time,,,,,Duración del entrenamiento: 14 minutos y 1 segundos;;;;;;;
+Accuracy,,,,,Model Accuracy: 0.7399103139013453;;;;;;;
+AUC-ROC,,,,,AUC-ROC: 0.8284583063994828;;;;;;;
+;;;;;;;
+;;;;;;;
+__________________________________________________________________________________________________;;;;;;;Entrenando modelo de CNN...
+"Model: ""sequential""";;;;;;;Epoch 1/30
+_________________________________________________________________;;;;;;;2023-06-07 14:57:26.534513: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8100
+ Layer (type)                Output Shape              Param #;;;;;;;2023-06-07 14:57:27.458078: I tensorflow/core/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+=================================================================;;;;;;;2023-06-07 14:57:28.966782: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.11GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+ conv2d (Conv2D)             (None, 254, 254, 3)       30;;;;;;;2023-06-07 14:57:28.985699: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+;;;;;;;2023-06-07 14:57:29.014428: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.30GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+ resnet50 (Functional)       (None, None, None, 2048)  23587712;;;;;;;2023-06-07 14:57:29.281692: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.30GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+;;;;;;;2023-06-07 14:57:29.319027: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.11GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+ flatten (Flatten)           (None, 131072)            0;;;;;;;2023-06-07 14:57:29.338098: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+;;;;;;; 6/45 [===>..........................] - ETA: 11s - loss: 0.8435 - accuracy: 0.3958 - precision: 0.3889WARNING:tensorflow:Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0570s vs `on_train_batch_end` time: 0.1880s). Check your callbacks.
+ dense (Dense)               (None, 256)               33554688;;;;;;;45/45 [==============================] - ETA: 0s - loss: 0.6933 - accuracy: 0.5639 - precision: 0.54372023-06-07 14:58:54.863433: W tensorflow/core/common_runtime/bfc_allocator.cc:360] Garbage collection: deallocate free memory regions (i.e., allocations) so that we can re-allocate a larger region to avoid OOM due to memory fragmentation. If you see this message frequently, you are running near the threshold of the available device memory and re-allocation may incur great performance overhead. You may try smaller batch sizes to observe the performance impact. Set TF_ENABLE_GPU_GARBAGE_COLLECTION=false if you'd like to disable this feature.
+;;;;;;;2023-06-07 14:58:56.196528: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+ batch_normalization (BatchN  (None, 256)              1024;;;;;;;2023-06-07 14:58:56.309009: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.30GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+ ormalization);;;;;;;45/45 [==============================] - 97s 2s/step - loss: 0.6933 - accuracy: 0.5639 - precision: 0.5437 - val_loss: 0.6872 - val_accuracy: 0.6716 - val_precision: 0.6036
+;;;;;;;Epoch 2/30
+ activation (Activation)     (None, 256)               0;;;;;;;45/45 [==============================] - 92s 2s/step - loss: 0.6022 - accuracy: 0.6833 - precision: 0.6364 - val_loss: 0.5212 - val_accuracy: 0.7537 - val_precision: 0.6809
+;;;;;;;Epoch 3/30
+ dropout (Dropout)           (None, 256)               0;;;;;;;45/45 [==============================] - 131s 3s/step - loss: 0.5138 - accuracy: 0.7611 - precision: 0.7117 - val_loss: 0.5014 - val_accuracy: 0.8060 - val_precision: 0.8475
+;;;;;;;Epoch 4/30
+ dense_1 (Dense)             (None, 128)               32896;;;;;;;45/45 [==============================] - 129s 3s/step - loss: 0.4250 - accuracy: 0.8333 - precision: 0.8000 - val_loss: 0.4597 - val_accuracy: 0.7910 - val_precision: 0.8305
+;;;;;;;Epoch 5/30
+ batch_normalization_1 (Batc  (None, 128)              512;;;;;;;45/45 [==============================] - 131s 3s/step - loss: 0.4260 - accuracy: 0.8139 - precision: 0.7678 - val_loss: 0.4329 - val_accuracy: 0.8284 - val_precision: 0.9074
+ hNormalization);;;;;;;Epoch 6/30
+;;;;;;;45/45 [==============================] - 126s 3s/step - loss: 0.3739 - accuracy: 0.8583 - precision: 0.8342 - val_loss: 0.4709 - val_accuracy: 0.8209 - val_precision: 0.9388
+ activation_1 (Activation)   (None, 128)               0;;;;;;;Epoch 7/30
+;;;;;;;45/45 [==============================] - ETA: 0s - loss: 0.3704 - accuracy: 0.8833 - precision: 0.8594El val_accuracy alcanz� el valor 0.85. Deteniendo el entrenamiento.
+ dropout_1 (Dropout)         (None, 128)               0;;;;;;;45/45 [==============================] - 134s 3s/step - loss: 0.3704 - accuracy: 0.8833 - precision: 0.8594 - val_loss: 0.4304 - val_accuracy: 0.8507 - val_precision: 0.9796
+;;;;;;;Modelo entrenado
+ dense_2 (Dense)             (None, 64)                8256;;;;;;;Duraci�n del entrenamiento: 14 minutos y 1 segundos
+;;;;;;;
+ batch_normalization_2 (Batc  (None, 64)               256;;;;;;;
+ hNormalization);;;;;;;
+;;;;;;;
+ activation_2 (Activation)   (None, 64)                0;;;;;;;
+;;;;;;;
+ dropout_2 (Dropout)         (None, 64)                0;;;;;;;
+;;;;;;;
+ dense_3 (Dense)             (None, 1)                 65;;;;;;;
+;;;;;;;
+=================================================================;;;;;;;
+Total params: 57,185,439;;;;;;;
+Trainable params: 33,596,831;;;;;;;
+Non-trainable params: 23,588,608;;;;;;;
+_________________________________________________________________;;;;;;;
