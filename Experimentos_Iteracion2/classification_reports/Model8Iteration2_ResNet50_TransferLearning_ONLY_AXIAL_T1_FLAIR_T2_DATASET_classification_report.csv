@@ -1,0 +1,57 @@
+,precision,recall,f1-score,support,0;;;;;;;
+Cerebro sano,0.5102040816326531,0.5208333333333334,0.5154639175257733,48.0,;;;;;;;
+Cerebro con HSVE,0.5106382978723404,0.5,0.5052631578947369,48.0,;;;;;;;
+accuracy,0.5104166666666666,0.5104166666666666,0.5104166666666666,0.5104166666666666,;;;;;;;
+macro avg,0.5104211897524967,0.5104166666666667,0.5103635377102551,96.0,;;;;;;;
+weighted avg,0.5104211897524967,0.5104166666666666,0.510363537710255,96.0,;;;;;;;
+TRAINING - 0,,,,,Número de ejemplos de la clase 0 en el conjunto de entrenamiento: 95;;;;;;;
+TRAINING - 1,,,,,Número de ejemplos de la clase 1 en el conjunto de entrenamiento: 95;;;;;;;
+VALIDACIÓN - 0,,,,,Número de ejemplos de la clase 0 en el conjunto de validación: 51;;;;;;;
+VALIDACIÓN - 1,,,,,Número de ejemplos de la clase 1 en el conjunto de validación: 51;;;;;;;
+TEST - 0,,,,,Número de ejemplos de la clase 0 en el conjunto de test: 48;;;;;;;
+TEST - 1,,,,,Número de ejemplos de la clase 1 en el conjunto de test: 48;;;;;;;
+Training-time,,,,,Duración del entrenamiento: 9 minutos y 38 segundos;;;;;;;
+Accuracy,,,,,Model Accuracy: 0.5104166666666666;;;;;;;
+AUC-ROC,,,,,AUC-ROC: 0.5247395833333333;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+__________________________________________________________________________________________________;;;;;;;Entrenando modelo de CNN...
+"Model: ""sequential""";;;;;;;Epoch 1/30
+_________________________________________________________________;;;;;;;2023-06-07 15:35:49.166525: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8100
+ Layer (type)                Output Shape              Param #;;;;;;;2023-06-07 15:35:50.030461: I tensorflow/core/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+=================================================================;;;;;;;2023-06-07 15:35:51.508918: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.11GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+ conv2d (Conv2D)             (None, 254, 254, 3)       30;;;;;;;2023-06-07 15:35:51.526912: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+;;;;;;;2023-06-07 15:35:51.554204: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.30GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+ resnet50 (Functional)       (None, None, None, 2048)  23587712;;;;;;;2023-06-07 15:35:51.808848: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.30GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+;;;;;;;2023-06-07 15:35:51.844777: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.11GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+ flatten (Flatten)           (None, 131072)            0;;;;;;;2023-06-07 15:35:51.864562: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+;;;;;;;23/24 [===========================>..] - ETA: 0s - loss: 0.5723 - accuracy: 0.7228 - precision: 0.71742023-06-07 15:35:58.828625: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.10GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+ dense (Dense)               (None, 256)               33554688;;;;;;;2023-06-07 15:35:58.847956: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+;;;;;;;2023-06-07 15:35:58.877014: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.30GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+ dense_1 (Dense)             (None, 512)               131584;;;;;;;2023-06-07 15:35:58.933365: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.30GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+;;;;;;;24/24 [==============================] - 20s 462ms/step - loss: 0.5548 - accuracy: 0.7316 - precision: 0.7292 - val_loss: 1.0629 - val_accuracy: 0.5784 - val_precision: 0.5455
+ dense_2 (Dense)             (None, 1)                 513;;;;;;;Epoch 2/30
+;;;;;;;24/24 [==============================] - 12s 505ms/step - loss: 0.1709 - accuracy: 0.9263 - precision: 0.9355 - val_loss: 0.9846 - val_accuracy: 0.7255 - val_precision: 1.0000
+=================================================================;;;;;;;Epoch 3/30
+Total params: 57,274,527;;;;;;;24/24 [==============================] - 43s 2s/step - loss: 0.0850 - accuracy: 0.9789 - precision: 1.0000 - val_loss: 0.7516 - val_accuracy: 0.6176 - val_precision: 0.6250
+Trainable params: 33,686,815;;;;;;;Epoch 4/30
+Non-trainable params: 23,587,712;;;;;;;24/24 [==============================] - 40s 2s/step - loss: 0.0379 - accuracy: 0.9947 - precision: 1.0000 - val_loss: 0.7890 - val_accuracy: 0.6078 - val_precision: 0.6038
+_________________________________________________________________;;;;;;;Epoch 5/30
+;;;;;;;24/24 [==============================] - 44s 2s/step - loss: 0.0154 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.7937 - val_accuracy: 0.6961 - val_precision: 0.7500
+;;;;;;;Epoch 6/30
+;;;;;;;24/24 [==============================] - 46s 2s/step - loss: 0.0096 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.8100 - val_accuracy: 0.6373 - val_precision: 0.6400
+;;;;;;;Epoch 7/30
+;;;;;;;24/24 [==============================] - 48s 2s/step - loss: 0.0063 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.8392 - val_accuracy: 0.6373 - val_precision: 0.6400
+;;;;;;;Epoch 8/30
+;;;;;;;24/24 [==============================] - 60s 3s/step - loss: 0.0040 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.8425 - val_accuracy: 0.6373 - val_precision: 0.6400
+;;;;;;;Epoch 9/30
+;;;;;;;24/24 [==============================] - 67s 3s/step - loss: 0.0028 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.8644 - val_accuracy: 0.6471 - val_precision: 0.6531
+;;;;;;;Epoch 10/30
+;;;;;;;24/24 [==============================] - 62s 3s/step - loss: 0.0022 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.8738 - val_accuracy: 0.6078 - val_precision: 0.6000
+;;;;;;;Epoch 11/30
+;;;;;;;24/24 [==============================] - 64s 3s/step - loss: 0.0019 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.8778 - val_accuracy: 0.6569 - val_precision: 0.6667
+;;;;;;;Epoch 12/30
+;;;;;;;24/24 [==============================] - 71s 3s/step - loss: 0.0016 - accuracy: 1.0000 - precision: 1.0000 - val_loss: 0.8942 - val_accuracy: 0.6275 - val_precision: 0.6275
+;;;;;;;Modelo entrenado
+;;;;;;;Duraci�n del entrenamiento: 9 minutos y 38 segundos
